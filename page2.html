@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Second Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+        }
+        .htrain{
+            margin-top: 10px;
+            margin-left: 60px;
+        }
+        header a{
+            text-decoration: none;
+            color: black;
+        }
+        .hanger{
+            position: relative;
+            bottom: 30px;
+            text-align: end;
+        }
+        .hanger a{
+            padding-right:  100px;
+        }
+        section{
+            background-color: #D84F57;
+        }
+        .sec{
+            text-align: center;
+            position: relative;
+            height: 90vh;
+            color: white;
+            top: 50px;
+            margin-left: 500px;
+        }
+        .sec h1{
+            font-size: 50px;
+        }
+        .sec h2{
+            margin-top: 10px;
+            font-size: 30px;
+        }
+        .fh{
+          background-color: white;
+          position: absolute;
+          bottom: 50px;
+          left: 70px;
+          width: 400px;
+          height: 500px;
+        }
+        .fh h2{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .fh img{
+            margin-top: 10px;
+            margin-left: 120px;
+        }
+        .fh p{
+            margin-top: 10px;
+            text-align: center;
+            color: #635e5e ;
+        }
+        .mainbtn{
+            color: white;
+            margin-left: 110px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color:#D84F57;
+            font-weight: 600;
+            border: none;
+            border-radius: 20px;
+            width: 350px;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        .u{
+            margin-top: 10px;
+            margin-left: 50px;
+            border-radius: 20px;
+        }
+            /* Full-width input fields */
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    .mbl{
+      width: 90%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1; 
+    }
+
+    /* Add a background color when the inputs get focus */
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for all buttons */
+    .signupbtn{
+      background-color: #04aa6d;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    button:hover {
+      opacity: 1;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      border: none;
+      margin-top: 10px;
+      padding: 14px 20px;
+      background-color: #f44336;
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn,
+    .signupbtn {
+      float: left;
+      width: 40%;
+      margin: 10px;
+      border-radius: 20px;
+    }
+
+    /* Add padding to container elements */
+    .container {
+      padding: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: #474e5d;
+      padding-top: 50px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 50%; /* Could be more or less, depending on screen size */
+    }
+
+    /* Style the horizontal ruler */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 35px;
+      top: 15px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #f44336;
+      cursor: pointer;
+    }
+
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .log{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="htrain">
+            <a href="js index.html" class="htrain-ticket"><img id="redrailimg" src="./js images/download.svg" alt="" width="50px"> <br>Train Tickets</a>
+        </div>
+        <div class="hanger">
+        <a href=""><i class="fa-solid fa-headphones-simple"></i> Help</a>
+        <a href=""><i class="fa-solid fa-language"></i> Engish</a>
+        <a href=""><i class="fa-solid fa-circle-user"></i> Account</a>
+        </div>
+    </header>
+    <section>
+        <div class="sec">
+      <h1>RedRail Help</h1>
+      <img src="./js images/help.jpg" alt="">
+      <h2>24/7 Customer Support</h2>
+    </div>
+      <div class="fh">
+        <h2>Help</h2>
+        <img src="./js images/help call.svg" alt="">
+        <p>For seamless booking management <br> and customer support</p>  
+        <button class="mainbtn" onclick="document.getElementById('id01').style.display='block'"
+        style="width: auto">Login to your account</button>
+        <div id="id01" class="modal">
+            <span
+              onclick="document.getElementById('id01').style.display='none'"
+              class="close"
+              title="Close Modal"
+              >&times;</span>
+            <form class="modal-content" action="/action_page.php">
+              <div class="container">
+                <h1 class="log">Login</h1>
+                <p>Please fill in this form to help.</p>
+                <hr />
+                <label for="email"><b>User Name</b></label>
+                <input type="text" placeholder="Enter User Name" name="email" required />
+      
+                <label for="psw"><b>Password</b></label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  name="psw"
+                  required/>
+      
+                <label for="psw-repeat"><b>Mobile Number</b></label>
+                <input class="mbl"
+                  type="number"
+                  placeholder="Mobile Number"
+                  name="psw-repeat"
+                  required />
+      
+                <div class="clearfix">
+                  <button
+                    type="button"
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">
+                    Cancel
+                  </button>
+                  <button type="submit" class="signupbtn">Generate OTP</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        <h2>Faq</h2>
+        <iframe class="u" src="https://www.youtube.com/embed/YlTOjAC_0QI?si=-GlQcR1QfQyb9lAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    </section>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("id01");
+  
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+
+      </script>
+</body>
+</html>

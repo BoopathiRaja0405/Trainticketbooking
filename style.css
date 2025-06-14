@@ -1,0 +1,858 @@
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+header a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+header {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    /* position: sticky;
+    top: 0px; */
+}
+.htrain-ticket{
+   margin-left: 100px;
+}
+
+.active, .fbtn:hover {
+    background-color: rgba(69, 75, 80, 0.281);
+    border-radius: 20px;
+}
+ .fbtn{
+    position: relative;
+    top: 13px;
+    right: 350px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+ }
+ #helppage{
+    position: relative;
+    border: none;
+    bottom: 7px;
+    background-color: white;
+    cursor: pointer;
+    right: 170px;
+ }
+ .active, #helppage:hover {
+    background-color: rgba(69, 75, 80, 0.281);
+    border-radius: 20px;
+}
+ #acbtn{
+    position: relative;
+    border: none;
+    bottom: 7px;
+    background-color: white;
+    cursor: pointer;
+    right: 50px;
+ }
+ .active, #acbtn:hover {
+    background-color: rgba(69, 75, 80, 0.281);
+    border-radius: 20px;
+}
+/* Full-width input fields */
+.container input[type=text], .container input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .num{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  .log {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .fbtn button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+.fa-ticket{
+    font-size: 20px;
+}
+.fa-circle-question{
+    font-size: 20px;
+}
+.fa-circle-user{
+    font-size: 20px;
+}
+#backgroundimg{
+    width: 200vh;
+}
+#redrailimg{
+    margin-left: 20px;
+}
+section{
+    background-image: url(./js\ images/train.svg);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tl{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    top: 50px;
+    margin-left: 70px;
+}
+.tl p{
+    position: relative;
+    top: 15px;
+} 
+
+i.fa-train-subway{
+    position: relative;
+    right:30px;
+    
+}
+.search{
+    color: white;
+    font-size: 19px;
+    background-color:rgb(189, 0, 63) ;
+    width: 270px;
+    height: 50px;
+    position: relative;
+    bottom: 150px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.allbtn{
+    position: relative;
+    bottom: 80px;
+    background-color: #dee5e7;
+    height: 150px;
+    text-align: center;
+    align-content: center;
+   
+
+}
+.allbtn button{
+   background-color: white;
+   height: 120px;
+   width: 270px;
+   border-radius: 30px;
+   border: none;
+   margin: 10px;
+   font-size: 15px;
+   font-weight: 600;
+   cursor: pointer;
+}
+.video{
+    display:flex;
+    justify-content: space-between;
+    margin: 30px;
+    position: relative;
+    bottom: 50px;
+}
+.v{
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+}
+.video p{
+    text-align: center;
+    margin: 10px;
+    font-weight: 600;
+}
+.video iframe{
+    border-radius: 20px;
+}
+.app{
+    position: relative;
+    bottom: 25px;
+    margin-left: 70px;
+}
+.bcolor{
+    position: relative;
+    margin-left: 70px;
+    height:100px ;
+    width: 1200px;
+    background-color:white;
+    box-shadow: 3px 5px 10px black;
+    display: flex;
+    border-radius: 20px;
+}
+.bcolor img{
+    margin-left: 20px;
+}
+.bcolor p{
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+.dapp{
+    font-weight: 600;
+    background-color: lightpink;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    position: relative;
+    top: 30px;
+    left:500px;
+    cursor: pointer;
+    border: none;
+}
+.routes{
+    position: relative;
+    top: 50px;
+    margin-left: 70px;
+    border: 2px solid gray;
+    height: 115vh;
+    width: 1200px;
+}
+.routes h2{
+    position: relative;
+    top: 10px;
+}
+
+.p1 p{
+    padding: 10px;
+}
+.routes h2{
+margin: 15px;
+margin-bottom: 30px;
+}
+.p1 button{
+    font-weight: 600;
+    background-color: lightpink;
+    height: 40px;
+    width: 120px;
+    border-radius: 50px;
+    border: none;
+    margin-left: 700px;
+    cursor: pointer;
+}
+#ticket{
+    position: relative;
+    top: 90px;
+    margin-left: 70px;
+}
+#ticket p{
+    color: #635e5e;
+    position: relative;
+    top: 10px;
+    text-align:justify ;
+    width: 1200px;
+    line-height: 30px;
+}
+#step{
+    background-color: #dee5e7;
+    position: relative;
+    top: 130px;
+    height: 700px;
+}
+#step h2{
+    position: relative;
+    top: 10px;
+    margin-left: 70px;
+}
+#step p{
+    color: #635e5e ;
+    position: relative;
+    margin-left: 70px;
+    top: 20px;
+    line-height: 10px;
+}
+#step img{
+    position: relative;
+    top: 40px;
+    margin-left: 70px;
+}
+#hbtn{
+    position: relative;
+    bottom: 500px;
+    margin-left: 500px;
+}
+#hbtn button{
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid #635e5e;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 700px;
+   text-align: start;
+   cursor: pointer;
+}
+#hbtn span{
+    color: red;
+}
+#how{
+    position: relative;
+    top: 170px;
+    margin-left: 70px;
+    width: 1200px;
+}
+#how p{
+    position: relative;
+    top: 10px;
+    color:#635e5e;
+    text-align: justify;
+    line-height: 30px;
+}
+#how span{
+    color:black;
+    position: relative;
+}
+#p2{
+  padding-top: 20px;
+}
+#time{
+    position: relative;
+    top: 220px;
+    margin-left: 70px;
+    width: 1200px;
+    border-radius: 30px;
+}
+#time p{
+    color:#635e5e;
+    position: relative;
+    top: 10px;
+    line-height: 30px;
+}
+#time table{
+    position: relative;
+    top: 30px;
+    border-collapse:collapse ;
+    border-radius: 10px;
+    width: 1220px;
+} 
+#time th,td{
+    padding: 15px;
+    border: 1px solid gray;
+}
+#time th{
+    background-color: #dee5e7;
+    text-align: left;
+}
+#time tbody{
+    font-size: 15px;
+}
+#cancel{
+    position: relative;
+    top: 300px;
+    margin-left: 70px;
+    width: 1200px;
+}
+#cancel p{
+    position: relative;
+    top: 10px;
+    color:#635e5e;
+    text-align: justify;
+    line-height: 30px;
+}
+#booktime{
+    position: relative;
+    top: 350px;
+    width: 1200px;
+    margin-left: 70px;
+}
+#booktime p{
+    color:#635e5e;
+    position: relative;
+    top: 10px;
+    text-align: justify;
+    line-height: 30px;
+}
+#booktime table{
+    position: relative;
+    top: 30px;
+    border-collapse: collapse;
+    border-radius: 20px;
+    width: 1200px;
+}
+#booktime th,td{
+    padding: 15px;
+    border: 1px solid gray;
+}
+#booktime th{
+    text-align: left;
+    background-color: #dee5e7
+}
+#booktime tbody{
+    font-size: 15px;
+}
+#wrapper{
+    position: relative;
+    top: 430px;
+    margin-left: 70px;
+    width: 1200px;
+}
+
+#tfooter{
+position: relative;
+top: 520px;
+background-color: #dee5e7;
+}
+#footer{
+display: flex;
+justify-content: space-between;
+}
+#footer li{
+list-style: none;
+}
+.active, #footer li:hover {
+background-color: rgba(69, 75, 80, 0.281);
+border-radius: 20px;
+width: 110px;
+}
+#footer ul{
+margin-top: 10px;
+margin-left: 70px;
+width: 1200px;
+line-height: 40px;
+}
+#imgp{
+display: flex;
+margin-left: 80px;
+margin-top: 20px;
+width: 1200px;
+}
+#imgp p{
+margin-left: 30px;
+color:#635e5e;
+line-height: 30px;
+font-size: 15px;
+}
+#lf{
+margin-top: 20px;
+margin-left: 80px;
+width: 1200px;
+display: flex;
+justify-content: space-between;
+}
+#lf p{
+margin-top: 30px;
+color:#635e5e;
+font-size: 15px;
+}
+
+#lf i{
+padding: 20px;
+font-size: 25px;
+}
+
+.accordion {
+    background-color: #dee5e7;
+    color: #020202;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    color:#635e5e;
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 40px;
+  }
+
+  /* Search train */
+  .con{
+    background-color: rgb(245, 245, 245);
+    height: 130px;
+    margin: 130px;
+    border-radius: 30px;
+    text-align: center;
+    align-content: center;
+    box-shadow: 3px 5px 10px black;
+    border: 2px solid lightgrey;
+    height: 160px;
+ }
+ .con input{
+   margin: 20px;
+    position: relative;
+    left: 90px;
+    bottom: 20px;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+ }
+ .con button{
+    font-weight: 600;
+    position: relative;
+    top: 80px;
+    height: 50px;
+    width: 200px;
+    right: 380px;
+    border-radius: 30px;
+    border: none;
+    background-color:lightpink;
+    cursor: pointer;
+ }
+ .con button:hover{
+    background-color: rgb(207, 10, 75);
+ }
+
+.autocomplete-list {
+    margin-top: -40px;
+    position: absolute;
+    background-color: #dee5e7;
+    box-shadow: 3px 5px 10px black;
+
+    /* border: 1px solid #ccc; */
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+.autocomplete-item {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+.autocomplete-item:hover {
+    background-color: #f1f1f1;
+}
+
+.con i{
+    right: 120px;
+    position: relative;
+    bottom: 20px;
+}
+
+  input[type="date"] {
+    position: relative;
+    padding-right: 40px; /* Make space for the icon */
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 200px;  /* Change this to move the icon horizontally */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: transparent; /* Optional: customize appearance */
+  }
+
+
+/* -------------------- */
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .bcolor, .routes, #ticket, #how, #time, #cancel, #booktime, #wrapper, #imgp, #lf, #footer ul {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .video {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .video div {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .htrain-ticket {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .ha {
+        margin-top: 10px;
+    }
+    
+    .con {
+        margin: 20px;
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    .con input, .con button {
+        width: 80%;
+        margin: 10px auto;
+        position: static;
+        display: block;
+    }
+    
+    .con i {
+        display: none;
+    }
+    
+    .allbtn {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .allbtn button {
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    #hbtn {
+        position: static;
+        margin-left: 0;
+    }
+    
+    #hbtn button {
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    #step {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    #myImage {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .con input, .con button {
+        width: 95%;
+    }
+    
+    .allbtn button {
+        width: 95%;
+    }
+    
+    .video iframe {
+        width: 100%;
+        height: auto;
+    }
+    
+    .bcolor {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    
+    .bcolor p, .dapp {
+        position: static;
+        margin: 10px 0;
+    }
+    
+    .dapp {
+        margin: 10px auto;
+    }
+    
+    #footer {
+        flex-direction: column;
+    }
+    
+    #footer ul {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    #imgp {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #imgp img {
+        margin: 0 auto;
+    }
+    
+    #imgp p {
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    #lf {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #lf p {
+        margin-top: 10px;
+    }
+    
+    .hb {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .first {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .first button {
+        display: inline-block;
+        margin: 0 5px;
+    }
+}
+
+
+/* -- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+    
+    p, li, a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+    
+    .cancelbtn, .signupbtn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .autocomplete-list {
+        width: 80%;
+    }
+}
+
+/* ------------ */
+

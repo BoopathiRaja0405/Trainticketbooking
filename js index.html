@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./js images/lts.svg" type="images/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <a href="" class="htrain-ticket"><img id="redrailimg" src="./js images/download.svg" alt="" width="50px"> <br>Train Tickets</a>
+        
+        <div class="ha">
+            <div class="tbtn" >
+        <button class="fbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa-solid fa-ticket"></i> Bookings</button>
+        <div id="id01" class="modal">
+  
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="./js images/book rail.png" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                <label for="psw"><b>Mobile Number</b></label>
+                <input class="num" type="number" placeholder="Enter Number" name="psw" required>
+                  
+                <button class="log" type="submit">Sign in</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <button id="helppage" onclick="goToSecondPage()"><i class="fa-regular fa-circle-question"></i>  Help</button>
+        <button id="acbtn" onclick="goToThirdPage()"><i class="fa-solid fa-circle-user"></i>   Account</button>
+        </div>
+    </header>
+    <section>
+        <div class="tl">
+        <h1>Train Ticket Booking</h1>
+        <p><img src="./js images/irctc.svg" alt=""> IRTC Authorised Partner</p>
+        </div>
+        <div class="con">
+            <!-- <h2>Search for Trains</h2> -->
+    
+            <input type="text" id="source" placeholder="From" style="text-align: center;"> <i class="fa-solid fa-train-subway"></i>
+            <div id="source-list" class="autocomplete-list"></div>
+    
+            <input type="text" id="destination" placeholder="To" style="text-align: center;"> <i class="fa-solid fa-train-subway"></i>
+            <div id="destination-list" class="autocomplete-list"></div>
+    
+            <input type="date" id="travelDate"  style="text-align: center;" >
+    
+            <button onclick="searchTrains()">Search Trains</button>
+        </div>
+         <div class="allbtn">
+            <button onclick="goPnr()" class="btn1"> <img src="./js images/pnr.svg" alt="" width="50"> <br>Check PNR status</button>
+            <button onclick="goStatus()"> <img src="./js images/lts.svg" alt="" width="50"><br>Live train status</button>
+            <button onclick="goFood()" class="btn3"> <img src="./js images/pnr.svg" alt="" width="50"><br>Order Food</button>
+            <button onclick="goMad()" class="btn4"> <img src="./js images/madad.svg" alt="" width="50"><br>Rail Madad</button>
+         </div>
+    </section>
+    <h2 class="v">Videos</h2>
+    <div class="video">
+        <div>
+            <p>How To book IRTC train...</p>
+            <iframe width="400" height="215" src="https://www.youtube.com/embed/S6KFnlwfnQI?si=3bNOuhpW9cDdyReE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <p>How to cancel a train ticket</p>
+            <iframe width="400" height="215" src="https://www.youtube.com/embed/KAbf1qWIL3U?si=_lhmyitM5W8SopXi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+            <p>Live train traking...</p>
+            <iframe width="400" height="215" src="https://www.youtube.com/embed/FdOlQxl4uyE?si=ts24R07fmc1y35i_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+   
+        <h2 class="app">Get the redRail App</h2>
+    <div class="bcolor">
+        <img src="./js images/appInstall.png" alt="" width="90px">
+        <p><b>Rated 4.5 on Play Store</b> <br>Dowload For Exciting Offers!</p>
+        <button onclick="app()" class="dapp">Download app</button>
+    </div>
+    <div class="routes">
+        <h2>Most Booked Train Ticket Routes</h2>
+        <div class="p1">
+        <p>MAS (Chennai) to SBC (Kovilpatti) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  onclick="goTrain()">Search Train</button ><hr></p>
+        <p>SBC (Bangalore) to MAS(Chennai) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="goTrain2()">Search Train</button><hr></p>
+        <p>CSMT (Mumbai) to PUNE (Pune) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="goTrain3()">Search Train</button><hr></p>
+        <p>PUNE (Pune) to CSMT (Mumbai) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="goTrain4()">Search Train</button><hr></p>
+        <p>MAS (Chennai) to CBE (Coiambatore) <button onclick="goTrain5()">Search Train</button><hr></p>
+        <p>CBE (Coiambatore) to MAS (Chennai) <button onclick="goTrain6()">Search Train</button><hr></p>
+        <p>MYS (Mysure) to MDU (Madurai) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="goTrain7()">Search Train</button><hr></p>
+        <p>MDU (Madurai) to MAS (Chennai) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="goTrain8()">Search Train</button><hr></p>
+        <p>SBC (Bangalore) to MYC (Mysure) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="goTrain9()">Search Train</button></p>
+       </div>
+    </div>
+    <div id="ticket">
+        <h2>IRCTC Train Ticket Booking With RedRail</h2>
+        <p>In the past, if you wanted to book train tickets, you had to physically visit ticket reservation centres and stand in long queues for hours. However, due to rising technology advancements, you can book IRCTC train tickets online from your home. redRail is an online train ticket booking platform that allows you to get tickets in just a few minutes.
+        <br> Utilising the super-convenient and user-friendly interface of redRail, you only need to enter the origin station, destination station, and travel date details. Instantly, the platform will display the list of available trains of your chosen route and travel date. As an authorised train ticket booking platform by IRCTC, redRail ensures the authenticity of your bookings.</p>
+    </div>
+    <div id="step">
+        <h2>Step-by-step Guide to Online Train Booking with redRail</h2>
+        <p>You can book train tickets from redRail in just 5 steps. Here's how to book and pay for a rail ticket online</p>
+        <img id="myImage" src="./js images/s1.webp" alt="Image" width="300">      
+        <div id="hbtn">
+            <button onclick="changeImage(0)"><span>Step 1: </span>Visit RedRail and Choose Journey Date</button>
+            <button onclick="changeImage(1)"><span>Step 2: </span>Select Class and Look for Available Trains</button>
+            <button onclick="changeImage(2)"><span>Step 3: </span> Add IRCTC User ID and Passenger Information</button>
+            <button onclick="changeImage(3)"><span>Step 4: </span> Choose a Method for Payment</button>
+            <button onclick="changeImage(4)"><span>Step 5: </span> Enter IRCTC Password to Confirm the Booking</button>
+        </div>
+    </div>
+    <div id="how">
+        <h2>Why Choose redRail for IRCTC Rail Ticket Booking?</h2>
+        <p>To experience a user-friendly and easy-to-use platform for train booking online, redRail offers a seamless train tickets booking experience for passengers. Take a look at the reasons why you should opt for redRail to book train tickets online.</p>
+        <p id="p2"><span><b>Authorised Partner of IRCTC</b></span> <br>
+            The reason for choosing redRail for IRCTC train ticket booking is that it is the authorised partner of IRCTC. Therefore, all the information available on the platform is authentic. You can easily check PNR status, track live train running status, check seat availability and much more on redRail for a hassle-free train journey. Checking train tickets availability is an extremely convenient process on redRail. 
+            <br><span><b>Refund for Cancellation of Train Tickets</b></span><br>
+            Train tickets online booking through redRail, ensures easy cancellation of tickets if required. The cancellation policy details for the ticket are mentioned on the website, and you will get a refund for most bookings. redRail also provides instant refunds for IRCTC train ticket booking made through UPI payment modes.
+            <br><span><b>Round-the-Clock Customer Assistance</b></span> <br>
+            Customer support for redRail is available 24/7 to help you with train bookings. Reach out to customer service for any issues related to online train ticket booking. The customer support staff will provide instant resolution for your problems and answer all your queries. You can quickly seek information on train ticket status and other train-related information. </p>
+    </div>
+    <div  id="time">
+        <h2>IRCTC Train Ticket Booking Timings</h2>
+        <p>The train ticket booking online timings may vary depending on the travel class and the type of ticket you want to book. Below is a table outlining the train ticket booking timings for the different travel classes and the different types of tickets.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Train Ticket Type</th>
+                    <th>Online Railway Ticket Booking Timings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>General and non-Tatkal Tickets</td>
+                    <td>12.20 AM to 11.45 PM on all 7 days of the week including Sunday</td>
+                </tr>
+                <tr>
+                    <td>Tatkal Tickets</td>
+                    <td>For AC travel classes - 10.00 AM to 11.00 AM on all 7 days of the week including Sundays. <br>
+                        For non-AC travel classes - 11.00 AM to 12.00 PM on all 7 days of the week including Sundays</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="cancel">
+        <h2>IRCTC Railway Ticket Booking Cancellation</h2>
+         <p>If you’ve booked a train ticket online through the IRCTC website or the redRail website or app, you can easily cancel your reservation quickly. Note that you can cancel your e-ticket only until IRCTC chart preparation is over. Once the chart is prepared, you cannot cancel your e-ticket. However, you’ll need to file a ticket deposit receipt (TDR) online to seek a refund depending upon the eligibility criteria. IRCTC charts are prepared on the previous night for trains departing until noon the next day.If you’re travelling with your family or as a group, you have the option to cancel the train ticket booking entirely or selectively cancel tickets for specific passengers. After the cancellation of train tickets, you will receive a refund, subject to eligibility and with the deduction of cancellation charges. These cancellation charges will vary depending on factors such as the travel class and the timing of the cancellation request.</p>
+    </div>
+    <div id="booktime">
+        <h2>IRCTC Cancellation Charges on Train Ticket Booking</h2>
+        <p>The train ticket booking online timings may vary depending on the travel class and the type of ticket you want to book. Below is a table outlining the train ticket booking timings for the different travel classes and the different types of tickets.</p>
+         <table>
+            <thead>
+                <tr>
+                    <th>Time Until Scheduled Departure</th>
+                    <th>Train Ticket Cancellation Charges (Per Passenger)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>More than 48 hours</td>
+                    <td>AC First Class and Executive Class - Rs. 240 + GST. <br>
+                        AC 3-Tier, AC Chair car, and AC 3-Tier Economy - Rs. 180 + GST. <br>
+                        Sleeper Class - Rs. 120 + GST. <br>
+                        Second Class - Rs. 60 + GST</td>
+                </tr>
+
+                <tr>
+                    <td>Between 12 to 48 hours</td>
+                    <td>25% of the train ticket fare subject to the minimum amounts mentioned above + GST</td>
+                </tr>
+                <tr>
+                    <td>Between 4 to 12 hours</td>
+                    <td>50% of the train ticket fare subject to the minimum amounts mentioned above + GST</td>
+                </tr>
+            </tbody>
+         </table>
+    </div>
+    <div id="wrapper">
+        <h2>FAQs about Train Ticket Booking</h2>
+<button class="accordion">What are the different modes of payment on redRail? <i class="fa-solid fa-chevron-down" ></i> </button>
+<div class="panel">
+  <p>You can pay through credit or debit cards, net banking, or UPI. Choose the most convenient payment option to confirm your IRCTC train ticket booking.</p>
+</div>
+
+<button class="accordion">How to cancel train tickets on redRail?<i class="fa-solid fa-chevron-down" ></i> </button>
+<div class="panel">
+  <p>To cancel your train ticket booking, visit the redRail website and go to the "My Bookings" tab. Choose the specific train booking that you want to cancel. Depending on your preference, you can cancel train tickets for all passengers booked under a single PNR or specific passengers.</p>
+</div>
+
+<button class="accordion">Do you need to pre-book train tickets?<i class="fa-solid fa-chevron-down" ></i></button>
+<div class="panel">
+  <p>Yes, it would be highly recommended to book train tickets online in advance.Train seats get filled up very quickly due to peak seasons or high travel demands.</p>
+</div>
+
+<button class="accordion">Does redRail allow cancellation after the date of departure?<i class="fa-solid fa-chevron-down" ></i></button>
+<div class="panel">
+  <p>No, you cannot cancel train tickets after the date of departure. According to IRCTC online railway ticket booking rules, you will not receive any refund if you cancel the tickets after the chart preparation.</p>
+</div>
+
+<button class="accordion">Is it possible to show the train ticket on my phone?<i class="fa-solid fa-chevron-down" ></i></button>
+<div class="panel">
+  <p>Yes, you can book train tickets on your mobile phone. Once you book train tickets on redRail, you’ll receive train ticket confirmation via email or text message on your registered email ID or mobile number.</p>
+</div>
+    </div>
+    
+    <div id="tfooter">
+    <div id="footer">
+       
+        <ul>
+            <h4>About RedRail</h4>
+            <li><a href="https://www.redbus.in/info/aboutus" target="_blank">About us</a></li>
+            <li><a href="https://www.redbus.in/info/contactus" target="_blank">Contact us</a></li>
+            <li><a href="https://www.redbus.in/careers/" target="_blank">Careers</a></li>
+            <li><a href="https://www.redbus.in/values" target="_blank">values</a></li>
+        </ul>
+        
+        <ul>
+            <h4>Info</h4>
+            <li><a href="https://www.redbus.in/info/termscondition" target="_blank">T&C</a></li>
+            <li><a href="https://www.redbus.in/info/privacypolicy" target="_blank">Privacy policy</a></li>
+            <li><a href="https://www.redbus.in/info/faq" target="_blank">FAQ</a></li>
+            <li><a href="https://blog.redbus.in/" target="_blank">Blog</a></li>
+        </ul>
+        <ul>
+            <h4>Our Partbers</h4>
+            <li><a href="https://www.goibibo.com/bus/" target="_blank">Goibibo Bus</a></li>
+            <li><a href="https://www.goibibo.com/hotels/" target="_blank">Gobibo Hotels</a></li>
+            <li><a href="https://www.makemytrip.com/hotels/" target="_blank">Mytrip Hotels</a></li>
+        </ul>
+    </div>
+    <div id="imgp">
+        <img src="./js images/download.svg" alt="" >
+        <p>RedRail is the world's largest online Rail ticket booking service trusted by over 25 million happy customers globally. redBus offers bus ticket booking through its website, iOS and Android mobile apps for all major routes.</p>
+    </div>
+    <div id="lf">
+        <p> &copy 2025 Redbus India Pvt Ltd. All rights reserved</p>
+        <span><i class="fa-brands fa-square-instagram"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-linkedin"></i><i class="fa-brands fa-square-twitter"></i><i class="fa-brands fa-github"></i></span>
+    </div>
+    </div>
+
+    <script src="./project.js"></script>
+</body>
+</html>

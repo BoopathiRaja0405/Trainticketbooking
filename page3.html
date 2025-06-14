@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+        *{
+            margin: 0;
+        }
+        .htrain{
+            margin-top: 10px;
+            margin-left: 60px;
+        }
+        header{
+            background-color: white;
+            height: 50px;
+
+        }
+        header a{
+            text-decoration: none;
+            color: black;
+        }
+        .hanger{
+            position: relative;
+            bottom: 30px;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+    .form-container{
+        margin:0;
+        font-family: "DM Serif Text", serif;
+        font-weight: 400;
+        height: 100vh;
+        background-image: url(./js\ images/t.jpg);
+        background-size: cover;
+    }
+    .form-container{
+        display: flex;
+        align-items:center;
+        justify-content:center;
+    }
+    #form{
+        width:600px ;
+        padding: 25px;
+        border-radius:5px;
+    }
+    #reg{
+        margin-bottom: 20px;
+    }
+    #reg span{
+        border-bottom: 3px solid red;
+    }
+    .inputfield{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    .inputfieldleft{
+        display: flex;
+        flex-direction:column;
+    }
+    .inputfieldleft>label{
+        font-weight: 500;
+        padding: 8px 0;
+    }
+    .inputfieldleft > input{
+        padding: 5px;
+        border: 2px solid lightgray;
+        border-radius: 3px;
+        width: 250px;
+        box-shadow: 1px 1px 2px lightgray;
+    }
+    .inputfieldright{
+        display: flex;
+        flex-direction: column;
+    }
+    .inputfieldright>label{
+        font-weight: 500;
+        padding: 8px 0 ;
+    }
+    .inputfieldright>input{
+        padding: 5px;
+        border: 2px solid lightgray;
+        border-radius: 3px;
+        width: 250px;
+        box-shadow: 1px 1px 2px lightgrey;
+    }
+    .inputfield+h2{
+        margin: 13px 0;
+    }
+    .Genderlist > label{
+        font-weight: 500;
+        margin-right: 50px;
+        padding: 20px;
+    }
+    .Genderlist input{
+       cursor: pointer;
+    }
+    .h3{
+        color: red
+    }
+    #btn{
+        color: white;
+        margin-top: 25px;
+        width: 100%;
+        border: none;
+        background-color: #f86d1c86;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .form-container label{
+        color: white;
+    }
+    .form-container input{
+        background-color: #f86d1c86;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="htrain">
+            <a href="js index.html" class="htrain-ticket"><img id="redrailimg" src="./js images/download.svg" alt="" width="50px"> <br>Train Tickets</a>
+        </div>
+        <div class="hanger">
+        <a href=""><i class="fa-solid fa-headphones-simple"></i> Help</a>
+        <a href=""><i class="fa-solid fa-ticket"></i> Bookings</a>
+        <a href=""><i class="fa-solid fa-circle-user"></i> Account</a>
+        </div>
+    </header>
+    <div class="form-container">
+        <form id="form">
+            <h2 id="reg"><span>Re</span>gisteration</h2>
+            <div class="inputfield">
+            <div class="inputfieldleft">
+            <label for="Full Name">Full name</label>
+            <input type="text" name="Full Name" id="Full Name">
+            <label for="Email">Email</label>
+            <input type="Email" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">  
+            </div>
+            
+            <div class="inputfieldright">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <label for="phone number">Phone Number</label>
+            <input type="tel" name="phone number" id="phone number">
+            <label for="password">Conform Password</label>
+            <input type="password" name="password" id="password">    
+            </div>
+            </div>
+
+            <h2 class="h3">Gender</h2>
+            <div class="Genderlist">
+                <input type="radio" name="Gender" id="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="Gender" id="FeMale">
+                <label for="female">FeMale</label>
+                <input type="radio" name="Gender" id="prefer not to say">
+                <label for="Prefer Not To say">Prefer Not To </label>
+            </div>
+            <button id="btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>
